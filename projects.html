@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="100Norte Projects - Explore our innovative software solutions">
+    <title>Projects | 100Norte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"></path>
+        </svg>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <h2>100<span>Norte</span></h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                Home
+            </a>
+            <a href="services.html">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                Services
+            </a>
+            <a href="about.html">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                About
+            </a>
+            <a href="projects.html" class="active">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+                Projects
+            </a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <header class="page-header fade-in">
+            <h1>Our Projects</h1>
+            <p>Explore some of the innovative solutions we have developed</p>
+        </header>
+
+        <div class="projects-grid">
+            <article class="project-card fade-in delay-1">
+                <h3>PDFWiseExtract</h3>
+                <p>An intelligent PDF data extraction tool that uses AI to automatically identify and extract relevant information from documents.</p>
+            </article>
+
+            <article class="project-card fade-in delay-2">
+                <h3>.NET MAUI Development</h3>
+                <p>Open source contributions to the .NET MAUI repository, helping build cross-platform mobile and desktop applications with a single codebase.</p>
+            </article>
+
+            <article class="project-card fade-in delay-3">
+                <h3>iSocios</h3>
+                <p>A comprehensive membership management software solution designed to streamline member registration, payments, and communication for organizations.</p>
+            </article>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 100Norte. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
