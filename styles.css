@@ -50,6 +50,8 @@ body {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 120px;
+    overflow: hidden;
 }
 
 .sidebar-logo h2 {
@@ -60,11 +62,13 @@ body {
 }
 
 .sidebar-logo-img {
-    max-width: 100%;
-    width: 60px;
+    max-width: 80px;
+    max-height: 80px;
+    width: auto;
     height: auto;
     display: block;
     margin: 0 auto;
+    object-fit: contain;
 }
 
 .sidebar-logo span {
