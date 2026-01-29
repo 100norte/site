@@ -60,7 +60,8 @@ body {
 }
 
 .sidebar-logo-img {
-    width: 80px;
+    max-width: 100%;
+    width: 60px;
     height: auto;
     display: block;
     margin: 0 auto;
