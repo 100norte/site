@@ -59,6 +59,13 @@ body {
     letter-spacing: 1px;
 }
 
+.sidebar-logo-img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .sidebar-logo span {
     color: var(--accent);
 }
@@ -150,8 +157,7 @@ body {
 }
 
 .hero-logo {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
     margin: 2rem auto;
     display: block;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
@@ -183,9 +189,6 @@ body {
 .services-intro {
     max-width: 800px;
     margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
 }
 
 .services-intro img {
@@ -193,12 +196,6 @@ body {
     border-radius: 16px;
     margin-bottom: 1.5rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-.services-overview-icon {
-    width: 120px;
-    height: 120px;
-    flex-shrink: 0;
 }
 
 .services-grid {
@@ -233,8 +230,8 @@ body {
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
     color: var(--accent);
 }
@@ -422,11 +419,6 @@ body {
 
     .service-icon {
         margin: 0 auto;
-    }
-
-    .services-intro {
-        flex-direction: column;
-        text-align: center;
     }
 
     .page-header h1 {
