@@ -150,8 +150,10 @@ body {
 }
 
 .hero-logo {
-    max-width: 200px;
+    width: 200px;
+    height: 200px;
     margin: 2rem auto;
+    display: block;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     transition: var(--transition);
 }
@@ -181,6 +183,9 @@ body {
 .services-intro {
     max-width: 800px;
     margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .services-intro img {
@@ -188,6 +193,12 @@ body {
     border-radius: 16px;
     margin-bottom: 1.5rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services-overview-icon {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
 }
 
 .services-grid {
@@ -219,6 +230,13 @@ body {
     border-radius: 12px;
     background: var(--background);
     padding: 0.5rem;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    color: var(--accent);
 }
 
 .service-content h2 {
@@ -400,6 +418,15 @@ body {
 
     .service-card img {
         margin: 0 auto;
+    }
+
+    .service-icon {
+        margin: 0 auto;
+    }
+
+    .services-intro {
+        flex-direction: column;
+        text-align: center;
     }
 
     .page-header h1 {
