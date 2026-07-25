@@ -1,76 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="100Norte - A minimalist software house specializing in AI trends and innovative solutions">
-    <title>100Norte | AI-Focused Software House</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>100Norte | Technology, with an eye on the future</title>
+<meta name="description" content="100Norte is a minimalist software &amp; technology house in Espinho, Portugal — AI and cross-platform apps, renewable energies, automation and network infrastructure.">
+<link rel="canonical" href="https://100norte.pt/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://100norte.pt/">
+<meta property="og:title" content="100Norte | Technology, with an eye on the future">
+<meta property="og:description" content="A minimalist software &amp; technology house — from AI and cross-platform apps to renewable energies, automation and network infrastructure.">
+<meta name="theme-color" content="#101d2e">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 12h18M3 6h18M3 18h18"></path>
-        </svg>
-    </button>
 
-    <nav class="sidebar" id="sidebar">
-        <div class="sidebar-logo">
-            <a href="index.html">
-                <img src="images/100nortelogo.png" alt="100Norte Logo" class="sidebar-logo-img">
-            </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="active">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                </svg>
-                Home
-            </a>
-            <a href="services.html">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                Services
-            </a>
-            <a href="about.html">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                About
-            </a>
-            <a href="projects.html">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                </svg>
-                Projects
-            </a>
-        </div>
+<!-- Icon sprite (Lucide, vendored inline — no runtime icon library). -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-code-2" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+  <symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-bar-chart-3" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+  <symbol id="i-git-branch" viewBox="0 0 24 24"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+  <symbol id="i-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-cookie" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+</svg>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="shell">
+    <a class="nav-brand" href="#top"><img src="assets/logomark-navy.svg" alt="100 Norte" width="37" height="26"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-link" href="#services">Services</a>
+      <a class="nav-link" href="#work">Work</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#legal">Legal</a>
+      <a class="btn btn-ink" href="#contact">Get in touch</a>
     </nav>
+  </div>
+</header>
 
-    <main class="main">
-        <section class="hero fade-in">
-            <h1>Welcome to <span>100Norte</span></h1>
-            <p>We are a minimalist software house with an eye on the future, specializing in cutting-edge AI trends and innovative digital solutions.</p>
-            <img src="images/100nortelogo.png" alt="100Norte Logo" class="hero-logo">
-            <div style="margin-top: 2rem;">
-                <a href="services.html" class="btn btn-primary">Explore Our Services</a>
-            </div>
-        </section>
+<main>
 
-        <footer class="footer">
-            <p>&copy; 2026 100Norte. All rights reserved.</p>
-        </footer>
-    </main>
+<!-- ===== HERO ===== -->
+<section class="hero shell" id="top">
+  <div class="hero-meta">
+    <span>Software · Renewable Energies · Automation · Networks</span>
+    <span>Portugal · Heading 100°</span>
+  </div>
+  <div class="hero-grid">
+    <div>
+      <p class="hero-kicker">Set the heading</p>
+      <h1>Technology, with an eye on the future.</h1>
+      <p class="hero-lead">A minimalist software &amp; technology house — from AI and cross-platform apps to renewable energies, automation and network infrastructure. Built with the precision of a navigator's instrument.</p>
+      <div class="hero-actions">
+        <a class="btn btn-red" href="#services">Explore services<svg class="icon"><use href="#i-arrow-up-right"/></svg></a>
+        <a class="btn btn-out" href="#work">See our work</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <img src="assets/logo-white.svg" alt="" width="300" height="279">
+    </div>
+  </div>
+</section>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById('sidebar').classList.toggle('open');
-        }
-    </script>
+<!-- ===== CAPABILITY STRIP ===== -->
+<section class="strip" aria-label="Capabilities">
+  <div class="shell">
+    <div class="strip-item"><b>.NET &amp; AI</b><span>Software core</span></div>
+    <div class="strip-item"><b>Renewables</b><span>Energy consulting</span></div>
+    <div class="strip-item"><b>Automation</b><span>Systems &amp; workflows</span></div>
+    <div class="strip-item"><b>Networks</b><span>UniFi deployment</span></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="shell" id="services">
+  <div class="sec">
+    <div class="sec-head">
+      <p class="sec-no">01</p>
+      <div>
+        <p class="sec-kicker">Services</p>
+        <h2 class="sec-title">Comprehensive solutions to propel your business into the future</h2>
+      </div>
+    </div>
+    <div class="cell-grid svc-grid">
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-code-2"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>Custom Software Development</h3>
+        <p>Tailored solutions built through an agile, iterative process — high-quality software aligned with your vision.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-cpu"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>AI &amp; Machine Learning</h3>
+        <p>Automate processes, surface insight from data and sharpen decisions with agentic AI built into the engineering.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-cloud"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>Cloud Computing</h3>
+        <p>Strategy, migration and management for scalable, flexible and cost-effective cloud infrastructure.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-smartphone"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>Mobile App Development</h3>
+        <p>User-friendly, high-performance apps for iOS and Android — one .NET MAUI codebase, every device.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-bar-chart-3"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>Data Analytics &amp; BI</h3>
+        <p>Turn data into decisions — uncover trends, measure performance and act on what matters.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-git-branch"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>DevOps &amp; CI/CD</h3>
+        <p>Rapid, reliable delivery — best-practice pipelines that ship software continuously and safely.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-sun"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>Renewable Energies</h3>
+        <p>Consulting on renewable energy systems — solar sizing and planning through to monitoring and smart integration.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-zap"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>Automation</h3>
+        <p>Home and business automation — connect devices, remove manual steps and let systems run themselves.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><svg class="icon"><use href="#i-network"/></svg><span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></div>
+        <h3>Network Deployment</h3>
+        <p>Reliable, scalable networks designed and deployed with UniFi — Wi-Fi, routing, switching and monitoring.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORK ===== -->
+<section class="shell" id="work">
+  <div class="sec">
+    <div class="sec-head">
+      <p class="sec-no">02</p>
+      <div>
+        <p class="sec-kicker">Selected work</p>
+        <h2 class="sec-title">Innovative solutions we have shipped</h2>
+      </div>
+    </div>
+    <div class="work-list">
+      <a class="proj" href="#contact">
+        <span class="proj-no">01</span>
+        <div>
+          <div class="proj-head"><span class="proj-name">PDFWiseExtract</span><span class="tag tag-accent">AI</span></div>
+          <p>Intelligent PDF data extraction — AI that automatically identifies and pulls the relevant information out of documents.</p>
+        </div>
+        <span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span>
+      </a>
+      <a class="proj" href="#contact">
+        <span class="proj-no">02</span>
+        <div>
+          <div class="proj-head"><span class="proj-name">.NET MAUI Development</span><span class="tag">Cross-platform</span></div>
+          <p>Cross-platform mobile and desktop applications built from a single codebase with .NET MAUI.</p>
+        </div>
+        <span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span>
+      </a>
+      <a class="proj" href="#contact">
+        <span class="proj-no">03</span>
+        <div>
+          <div class="proj-head"><span class="proj-name">iSocios</span><span class="tag">Platform</span></div>
+          <p>Comprehensive membership management — member registration, payments and communication in one platform.</p>
+        </div>
+        <span class="arrow"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="shell" id="about">
+  <div class="sec">
+    <div class="sec-head">
+      <p class="sec-no">03</p>
+      <div>
+        <p class="sec-kicker">About</p>
+        <h2 class="sec-title">Forward-thinking innovation, practical solutions</h2>
+      </div>
+    </div>
+    <div class="about-body">
+      <div class="rail"></div>
+      <div>
+        <p class="about-lead">100Norte is a forward-thinking technology company dedicated to exploring new ideas — across software, AI, renewable energies, automation and network infrastructure. We believe in the power of technology to transform businesses and improve lives.</p>
+        <div class="cell-grid stat-grid">
+          <div class="stat"><b>AI-first</b><span>Agentic workflows built into every engagement.</span></div>
+          <div class="stat"><b>.NET</b><span>Deep specialism in .NET, XAML &amp; MAUI.</span></div>
+          <div class="stat"><b>Minimal</b><span>A minimalist house — precision over noise.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="shell">
+    <div>
+      <p class="contact-kicker">Contact</p>
+      <h2>Let's set the heading.</h2>
+      <div class="contact-links">
+        <a href="mailto:geral@100norte.pt"><svg class="icon"><use href="#i-mail"/></svg>geral@100norte.pt</a>
+        <a href="https://100norte.pt"><svg class="icon"><use href="#i-globe"/></svg>100norte.pt</a>
+      </div>
+    </div>
+
+    <!-- Posts to Formspree; the script below submits it over fetch so the
+         visitor stays on the page. Without JS the native POST still works. -->
+    <form class="form" id="contact-form" action="https://formspree.io/f/mjgrkzre" method="POST">
+      <div>
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
+      </div>
+      <div>
+        <label for="f-message">Message</label>
+        <textarea id="f-message" name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+      </div>
+      <button class="btn btn-ink" type="submit"><span id="f-label">Send message</span><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+      <p class="form-note" id="f-note" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== LEGAL ===== -->
+<section class="shell" id="legal">
+  <div class="sec">
+    <div class="sec-head">
+      <p class="sec-no">04</p>
+      <div>
+        <p class="sec-kicker">Legal &amp; compliance</p>
+        <h2 class="sec-title">Transparency, by law and by heading</h2>
+      </div>
+    </div>
+    <div class="legal-list">
+      <details class="legal-item" id="privacy">
+        <summary>
+          <svg class="icon"><use href="#i-shield-check"/></svg>
+          <span><b>Privacy Policy</b><small>How we handle personal data under the GDPR &amp; Lei n.º 58/2019.</small></span>
+          <span class="chev"><svg class="icon"><use href="#i-chevron-down"/></svg></span>
+        </summary>
+        <div class="legal-body">
+          <p>We process personal data submitted through our contact form solely to respond to your enquiry.</p>
+          <p>Data controller: 100Norte, Lda. (NIPC 516 924 575), Espinho, Portugal. Contact: <a href="mailto:geral@100norte.pt">geral@100norte.pt</a>.</p>
+          <p>You may exercise your rights of access, rectification, erasure, restriction, portability and objection at any time by email. Data is retained only as long as necessary and is never sold or shared with third parties for marketing.</p>
+        </div>
+      </details>
+
+      <details class="legal-item" id="cookies">
+        <summary>
+          <svg class="icon"><use href="#i-cookie"/></svg>
+          <span><b>Cookie Policy</b><small>Consent-based cookies under Lei n.º 41/2004.</small></span>
+          <span class="chev"><svg class="icon"><use href="#i-chevron-down"/></svg></span>
+        </summary>
+        <div class="legal-body">
+          <p>Non-essential cookies are stored only with your explicit consent, requested via the banner on your first visit. Essential cookies keep the site functioning and require no consent.</p>
+          <p>You can withdraw consent at any time using the control below.</p>
+          <button class="btn btn-out" type="button" id="cookie-reset">Manage cookie consent</button>
+        </div>
+      </details>
+
+      <details class="legal-item" id="terms">
+        <summary>
+          <svg class="icon"><use href="#i-scale"/></svg>
+          <span><b>Terms &amp; Conditions</b><small>Use of this site, governed by Portuguese law.</small></span>
+          <span class="chev"><svg class="icon"><use href="#i-chevron-down"/></svg></span>
+        </summary>
+        <div class="legal-body">
+          <p>This website and its content are the property of 100Norte and provided for information about our services to businesses.</p>
+          <p>Engagements are governed by the specific written proposal or contract agreed with each client; nothing on this site constitutes a binding offer.</p>
+          <p>These terms are governed by Portuguese law, with the courts of [comarca] as the competent jurisdiction.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div>
+        <img src="assets/logo-white.svg" alt="100 Norte" width="37" height="34">
+        <p class="footer-blurb">AI-native software engineering &amp; consulting — set the heading, hold it to shipped product.</p>
+      </div>
+      <div>
+        <h2>Company details</h2>
+        <div class="footer-details">
+          <div>100Norte, Lda.</div>
+          <div>NIPC: 516 924 575</div>
+          <div>Sede: Espinho, Portugal</div>
+        </div>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <nav class="footer-legal" aria-label="Legal">
+          <a class="nav-link" href="#privacy">Privacy Policy</a>
+          <a class="nav-link" href="#cookies">Cookie Policy</a>
+          <a class="nav-link" href="#terms">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 100Norte, Lda. · Pixels and bytes from Espinho, Portugal.</span>
+      <nav aria-label="Footer">
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookiebar" id="cookiebar" role="region" aria-label="Cookie consent" hidden>
+  <div class="shell">
+    <div class="cookiebar-msg">
+      <svg class="icon"><use href="#i-cookie"/></svg>
+      <p>We use essential cookies to run this site and, with your consent, analytics to improve it. See our <a href="#cookies">Cookie Policy</a>.</p>
+    </div>
+    <div class="cookiebar-actions">
+      <button class="btn btn-out" type="button" data-consent="declined">Decline</button>
+      <button class="btn btn-red" type="button" data-consent="accepted">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var CONSENT_KEY = 'n100-cookie-consent';
+  var bar = document.getElementById('cookiebar');
+
+  function store(op, value) {
+    try { return op === 'get' ? localStorage.getItem(CONSENT_KEY)
+         : op === 'set' ? localStorage.setItem(CONSENT_KEY, value)
+         : localStorage.removeItem(CONSENT_KEY); }
+    catch (e) { return null; }
+  }
+
+  if (!store('get')) bar.hidden = false;
+
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-consent]');
+    if (!btn) return;
+    store('set', btn.dataset.consent);
+    bar.hidden = true;
+  });
+
+  document.getElementById('cookie-reset').addEventListener('click', function () {
+    store('remove');
+    bar.hidden = false;
+  });
+
+  // A legal panel linked to directly (#privacy, #cookies, #terms) opens itself.
+  function targetOfHash() {
+    if (!location.hash) return null;
+    try { return document.getElementById(decodeURIComponent(location.hash.slice(1))); }
+    catch (e) { return null; }
+  }
+
+  function openFromHash() {
+    var el = targetOfHash();
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+
+  // The browser's own jump to the fragment happens before the web font lands,
+  // so the layout shifts out from under it and we end up at the top. Re-apply
+  // it once everything has settled — arriving from the old /services.html-style
+  // URLs depends on this.
+  window.addEventListener('load', function () {
+    var el = targetOfHash();
+    if (el) el.scrollIntoView({ behavior: 'auto', block: 'start' });
+  });
+
+  // Submit over fetch so the visitor never leaves the page. If anything about
+  // the request fails, fall back to the form's own native POST.
+  var form = document.getElementById('contact-form');
+  var label = document.getElementById('f-label');
+  var note = document.getElementById('f-note');
+  var button = form.querySelector('button[type=submit]');
+
+  form.addEventListener('submit', function (e) {
+    if (!window.fetch) return;
+    e.preventDefault();
+    button.disabled = true;
+    label.textContent = 'Sending…';
+    note.hidden = true;
+    note.classList.remove('is-error');
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    }).then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      form.reset();
+      label.textContent = 'Message sent — thank you';
+      note.textContent = 'We will get back to you at the address you gave us.';
+      note.hidden = false;
+    }).catch(function () {
+      button.disabled = false;
+      label.textContent = 'Send message';
+      note.textContent = 'Something went wrong sending that. Please email geral@100norte.pt instead.';
+      note.classList.add('is-error');
+      note.hidden = false;
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
